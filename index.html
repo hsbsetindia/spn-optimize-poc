@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dummy HTML</title>
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MWSHSXM"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PER83S3N6S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PER83S3N6S');
+    </script>
 </head>
 <body>
-    Hello World!
+    <h1>Google Optimize POC</h1>
+    <button id="btn">Green</button>
+    <script>
+        (function() {
+            var btn = document.getAnimations("btn");
+            btn.style.backgroundColor = "blue";
+        })();
+    </script>
 </body>
 </html>
