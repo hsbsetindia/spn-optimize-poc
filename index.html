@@ -11,6 +11,7 @@
         .btn {
             padding: 5px;
             border: 0;
+            background-color: blue;
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -31,10 +32,12 @@
     <h1>Google Optimize POC</h1>
     <button id="btn" class="btn">Green</button>
     <script>
-        (function () {
-            var btn = document.getElementById("btn");
-            btn.style.backgroundColor = "blue";
-        })();
+        function implementManyExperiments(value, name) {
+            console.log("implementManyExperiments", value, name);
+        }
+        gtag('event', 'optimize.callback', {
+            callback: implementManyExperiments
+        })
     </script>
 </body>
 
