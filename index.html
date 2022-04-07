@@ -31,9 +31,20 @@
     <!-- End Google Tag Manager (noscript) -->
     <h1>Google Optimize POC</h1>
     <button id="btn" class="btn">Green</button>
+    <h2 id="secondExp">My Second Experiemnt</h2>
     <script>
         function implementManyExperiments(value, name) {
-            console.log("implementManyExperiments", value, name);
+            console.log("implementManyExperiments", value, name, performance.now());
+            if (name === "pkMIPma2T3OHzVuY9o8HUg") {
+                switch (value) {
+                    case "0":
+                        document.getElementById("secondExp").innerHTML = "My Second Experiemnt 0";
+                        break;
+                    case "1":
+                        document.getElementById("secondExp").innerHTML = "My Second Experiemnt 1";
+                        break;
+                }
+            }
         }
         gtag('event', 'optimize.callback', {
             callback: implementManyExperiments
